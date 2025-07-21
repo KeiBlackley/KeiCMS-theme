@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <title> KeiBlackleys' Page </title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="Keirran Blackley, Keirran, Blackley, Kei Blackley, Kei, KeiBlackley, Skunk">
+        <meta name="author" content="Keirran Blackley">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+        
+        <link href="assets/css/variables.css" rel="stylesheet" type="text/css"> <!-- Includes Default Vars -->
+        <link href="assets/css/global.css" rel="stylesheet" type="text/css"> <!-- Includes Global Elements -->
+        <link href="assets/css/forms.css" rel="stylesheet" type="text/css"> <!-- Includes Global Elements -->
+
+        <link href="assets/css/header.css" rel="stylesheet" type="text/css"> <!-- Includes Responsive Nav -->
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css"> <!-- Includes Main Elements -->
+        <link href="assets/css/footer.css" rel="stylesheet" type="text/css"> <!-- Includes Footer Elements -->
+
+        <link href="assets/css/loader-basic.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/styled.css" rel="stylesheet" type="text/css">
+
+        <script src="https://kit.fontawesome.com/bb6eaecf68.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/js/loader-basic.js"></script>
+    </head>
+    <body>
+        <header>    
+            <nav>
+                <ul>
+                    <li> <a href="https://keiblackley.github.io/about-me/">About Me</a> </li>
+                    <li> <a href="index" class="active">KeiBlackley</a> </li>
+                    <li class="dropdown">
+                        <a href="#">Websites</a>
+                        <ol>
+                            <li> <a href="https://keirranblackley.com" target="_blank"><i class="fa-solid fa-k"></i> Official/keirranblackley.com</a> </li>
+                            <li> <a href="https://keiblackley.github.io"><i class="fa-solid fa-folder"></i> Static/keiblackley.github.io</a> </li>
+                        </ol>
+                    </li> <!-- .dropdown -->
+
+                    <li class="dropdown">
+                        <a href="#">Projects</a>
+                        <ol>
+                            <li> <a href="https://keiblackley.github.io/" target="_blank"><i class="fa-brands fa-square-github"></i> GitHub/keiblackley.github.io</a> </li>
+                            <li> <a href="https://keiblackley.github.io/keicms/" target="_blank"><i class="fa-solid fa-server"></i> GitHub/KeiCMS</a> </li>
+                            <li> <a href="https://keiblackley.github.io/raspkei/" target="_blank"><i class="fa-brands fa-raspberry-pi"></i> GitHub/Raspkei</a> </li>
+                            <li> <a href="https://keiblackley.github.io/keicms/" target="_blank"><i class="fa-solid fa-sitemap"></i> GitHub/KeiTTP</a> </li>
+                        </ol>
+                    </li> <!-- .dropdown -->
+
+                    <li class="dropdown">
+                        <a href="#">Connect</a>
+                        <ol>
+                            <li> <a href="https://github.com/KeiBlackley" target="_blank"><i class="fa-brands fa-github"></i> GitHub @KeiBlackley</a> </li>
+                        </ol>
+                    </li> <!-- .dropdown -->
+                    
+                    <li> <a href="javascript:void(0);" id="mobile-icon"> 
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-gear"></i> 
+                    </a> </li>
+                </ul>
+            </nav>
+
+            <section class="banner">
+                <img src="assets/images/avatar.png" alt="Avatar" />
+            </section>
+        </header>
+
+        <aside>
+            <a href="javascript:toggleTab(this, 'theme-contents');" id="defaultOpen"> KeiCMS HTML Theme </a>
+
+            <ul> <h3> Elements </h3>
+                <li> <a href="javascript:toggleTab(this, 'element-layout');"> Global Elements </a> </li>
+                <li> <a href="javascript:toggleTab(this, 'element-styling');"> Styling </a> </li>
+                <li> <a href="javascript:toggleTab(this, 'element-forms');"> Form and Button </a> </li>
+                <li> <a href="javascript:toggleTab(this, 'element-other');"> Other Elements </a> </li>
+            </ul>
+        </aside>
+
+        <main>
+            <section id="theme-contents" class="padded tabbedContent">
+                <h1> KeiCMS HTML Theme </h1>
+
+                <article class="column-half">
+                    <h2> Responsive Navigation </h2>
+                    <ul class="pretty">
+                        <li> Navigation is hidden on < 768px with toggleable <b>#mobilenav-icon</b>. </li>
+                        <li> <b>Sticky</b>-to-top positioning. </li>
+                        <li> Dropdown links created in an <b>Ordered List</b> inside a <span>.dropdown</span>, <span><<b>nav</b>></span> <b>List Item</b>. </li>
+                    </ul>
+                </article>
+
+                <article class="column-half">
+                    <h2> Responsive Sidebar </h2>
+                    <ul class="pretty">
+                        <li> <span><<b>aside</b>></span> with <b>Unordered List</b> for links. </li>
+                        <li> For tabbed content links:
+                            <code>javascript:toggleTab(this, '<b>contentElementID</b>');</code>
+                            <code><<b>section</b> id="<b>contentElementID</b>" class="tabbedContent"></code>
+                        </li>
+                        <li> Links are displayed as full-width when width is < 768px. </li>
+                        <li> <span><<b>main</b>></span> width is overwritten with <span>--aside-width</span>. </li>
+                    </ul>
+                </article>
+            </section>
+
+            <article id="element-layout" class="padded tabbedContent">
+                <h1> Global Layout </h1>
+
+                <article class="column-half">
+                    <article id="header-tag">
+                        <h1> Header </h1>
+
+                        <ul> <h3> <<span>header</span>> </h3>
+                            <li> Defines a header for a document or section. </li>
+
+                            <ul id="nav-tag"> <h3> <<span>nav</span>> </h3>
+                                <li> Defines navigation links. </li>
+                                <li> Mobile responsiveness w/ Icon toggle. </li>
+                                <li> Stick-to-top positioning. </li>
+                                <li> Hoverable dropdown links. </li>
+                            </ul>
+
+                            <ul id="banner-tag"> <h3> <<span>div class="banner"</span>></span> </h3> 
+                                <li> Styling between header and content. </li>
+                            </ul>
+                        </ul>
+                    </article>
+
+                    <article id="footer-tag">
+                        <h1> Footer </h1>
+
+                        <ul> <h3> <<span>footer</span>> </h3>
+                            <li> Defines a footer for a document or section. </li>
+                            <li> <i>Optional</i> unordered list for left-aligning links. </li>
+                        </ul>
+                    </article>
+                </article>
+
+                <article class="column-half">
+                    <h1> Content </h1>
+                    <article id="aside-tag">
+                        <ul> <h3>Optional<sub>1</sub>: <<span>aside</span>> </h3>
+                            <li> Defines content aside from the page content. </li>
+                            <li> Place before <<b>main</b>> to work. </li>
+                            <li> Variable width using <b>--aside-width</b> (changes <<b>main</b>> margin) </li>
+                            <li> Links sent via JavaScript to toggle <span>.tabbedContent</span>:
+                                <code>javascript:<b>toggleTab</b>(event, '<b><i>tabElementID</i></b>');</code> 
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article id="main-tag">
+                        <ul> <h3> <<span>main</span>> </h3>
+                            <li> Specifies the main content of a document. </li>
+                            <li> Variable width set using <b>--main-width</b> (unless <b>optional<sup>1</sup></b> present)</li>
+                            <li> Has a <span>.padded</span> class for styling. </li>
+
+                            <ul> <h3> <<span>section</span>> </h3>
+                                <li> Defines a section in a document. </li>
+                            </ul>
+
+                            <ul> <h3> <<span>article</span>> </h3>
+                                <li> Defines an article. </li>
+                            </ul>
+                        </ul>
+                    </article>
+                </article>
+            </article>
+
+            <!-- Split Container -->
+            <section id="element-styling" class="padded tabbedContent"> 
+                <div class="column-half">
+                    <h1> Heading 1 </h1>
+                    <h2> Heading 2 </h2>
+                    <h3> Heading 3 </h3>
+                    <h4> Heading 4 </h4>
+                    
+                    <p> This is a paragraph tag. </p>
+                    <p> This is <b>bold</b> and this is <strong>strong</strong>. 
+                        This is <i>italic</i> and this is <em>emphasized</em>. 
+                        This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. 
+                        This is <u>underlined</u> and finally, this is <a href="">a link</a>.
+                        <code>Also, this is code.</code>
+                    </p>
+
+                    <h2> Images </h2>
+                    <img src="assets/images/avatar.png" class="zoom" alt="Avatar" class="avatar" />
+                    <img src="assets/images/k.png" class="hasbg" alt="Keirran Blackley Icon" class="avatar" />
+                </div>
+
+                <div class="column-half">
+                    <h2> Lists </h2>
+
+                    <ol> <h3> Ordered </h3>                    
+                        <li> Vivamus vitae sem dapibus, bibendum magna at, iaculis nisi. </li>
+                        <li> Maecenas eget est vel mi aliquet pretium. </li>
+                        <li> Nam gravida lorem quis urna iaculis posuere. </li>
+                        <li> Donec at eros ac sem sagittis rutrum. </li>
+                    </ol>
+
+                    <ul> <h3> Unordered </h3>
+                        <li> Aliquam fermentum ex et augue accumsan, a convallis arcu tempus. </li>
+                        <li> Ut ac nulla a urna dapibus pellentesque. </li>
+                        <li> Nullam vitae quam ut nulla semper suscipit eu vitae urna. </li>
+                        <li> Donec malesuada eros sit amet libero ornare lacinia. </li>
+                    </ul> 
+                </div>
+            </section>
+
+            <!-- Single Container -->
+            <section id="element-forms" class="padded tabbedContent">
+                <h1> Form and Inputs </h1>
+                    
+                <form action="" method="POST">
+                    <h3> Banners </h3>
+                    <!-- Alerts -->
+                    <div class="banner info"> <b>Info</b> banner </div>
+                    <div class="banner error"> <b>Error</b> banner </div>
+                    <div class="banner alert"> <b>Alert</b> banner </div>
+                    <div class="banner success"> <b>Success</b> banner </div>
+                    
+                    <input type="search" placeholder="Search" />
+
+                    <h3> .half Inputs </h3>
+                    <input type="text" class="half" placeholder="Text" />
+                    <input type="password" class="half" placeholder="Password" />
+                    
+                    <select>
+                        <option> Section Option </option>
+                        <option> Section Option 2 </option>
+                    </select>
+
+                    <label class="checkbox"> I agree this is a custom checkbox that overrides the default input.
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <input type="submit" name="formsubmit" value="Submit" />
+
+                    <button class="alpha"> Alpha Button </button>  
+                </form>
+            </section> 
+
+            <!-- Single Container -->
+            <section id="element-other" class="padded tabbedContent">
+                <h1> Other Elements </h1>
+                    
+                <table>
+                    <tr>
+                        <th> Table </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <td> Data 1 </td>
+                        <td> Data 2 </td>
+                    </tr>
+                    <tr>
+                        <td> Data 1 </td>
+                        <td> Data 2 </td>
+                    </tr>
+                    <tr>
+                        <td> Data 1 </td>
+                        <td> Data 2 </td>
+                    </tr>
+                </table>
+            </section> 
+        </main>
+
+        <footer>
+            <ul>
+                <li> &copy; Copyright </li>
+                <li> 2025 </li>
+                <li> KeiBlackley </li>
+                <li> All rights reserved </li>
+            </ul>
+        </footer>
+
+        <!-- GLOBAL SCRIPTS -->
+        <script type="text/javascript" src="assets/scripts/index.js"></script>
+        <script type="text/javascript" src="assets/scripts/loader-basic.js"></script>
+        <script type="text/javascript" src="assets/scripts/search.js"></script>
+        <script type="text/javascript" src="assets/scripts/typeText.js"></script>
+
+        <!-- LOCAL SCRIPTS -->
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+</html>

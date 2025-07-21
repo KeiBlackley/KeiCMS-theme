@@ -1,0 +1,60 @@
+#page { 
+  display: none;
+  
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+#loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+#loader > .wrapper { 
+  text-align: center; 
+  
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s
+}
+#loader > .wrapper h1 { font-size: 72px; }
+
+#loading {
+  width: 60px;
+  height: 60px;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--navyBlue);
+  border-top: 16px solid var(--darkBlue);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes animatetop { 
+  from { top:-100px; opacity:0 } 
+  to { top:0; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from { top:100%; opacity:0 } 
+  to { bottom:0; opacity:1 }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

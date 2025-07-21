@@ -1,0 +1,97 @@
+/* vars.css
+ * 'assets/css/vars.css'
+ * @author Keirran Blackley
+ * @version 2.0
+ * used for styling elements
+*/
+
+/* Imported Fonts */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* Default Variables */
+:root {
+  /* COLOURS */
+  --white: #FFF;
+  --lite-lite: #ccc;       --lite-regular: #bbb;         --lite-dark: #aaa;
+  --black: #000;
+  --dark-lite: #444;        --dark-regular: #333;         --dark-dark: #222;
+
+  /* THEME - USAGE */
+  --primary-col: #003454;
+  --secondary-col: whitesmoke;
+  
+  --theme-primary: #eee;
+  --theme-secondary: #BFD1E5;
+
+  --bg-col: var(--theme-primary);           --text-col: #353535;
+  --aside-bg: var(--theme-secondary);       --aside-col: var(--text-col);
+  --main-bg: inherit;                       --main-col: var(--text-col);
+  
+  /* ALERT COLOURS */
+  --banner-bg: #282f44;                 --banner-col: var(--white);
+  --error-col: #f44336;                 --alert-col: #ff9800;
+  --success-col: #04AA6D;               --info-col: #2196F3; 
+  /* USAGE END */
+
+  --heading-col: var(--primary-col);
+
+  --main-width: 80%;
+  --aside-width: 15%; /* aside width takes priority if html present */
+  
+  --text-spacing: 10px;
+  --header-spacing: 5%;
+  --list-spacing: 20px;
+  
+  /* Defaults */
+  --text-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  --box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  /* body */ 
+  --text-font: "Lato", sans-serif;
+  --heading-font: "Quicksand", sans-serif;
+
+  /* a */
+  --link-col: #6f9deb;                              --link-hover-col: #0c696e; 
+  --link-active-bg: var(--primary-col);             --link-active-col: whitesmoke;
+
+  /* header */
+  --header-bg: var(--primary-col);           --header-col: var(--white);
+
+  /* nav */
+  --nav-bg: var(--dark-regular);            --nav-col: var(--white);
+  --nav-droplink-bg: var(--lite-lite);      --nav-droplink-col: var(--black);
+  --nav-hover-bg: var(--dark-lite);         --nav-hover-col: var(--white);
+  
+  /* footer */
+  --footer-bg: #282f44;                             --footer-col: #b8bedd;
+
+  /* Other */
+  --tab-bg: var(--primary-col);
+  --tab-col: whitesmoke;
+
+  --article-bg: inherit;
+  --article-col: var(--text-col);
+
+  /* form */
+  --checkbox-checked: var(--primary-col);
+  /* button and submit */
+  --btn-bg: #0c696e;                                --btn-col: var(--white);
+  --btn-hover-bg: #6f9deb;                          --btn-hover-col: var(--white);
+
+  /* lists */
+  --list-bg: white;                               --list-col: var(--text-col);
+  --list-hover-bg: var(--theme-secondary);          --list-hover-col: var(--text-col);
+  
+  /* table */
+  --table-main-bg: var(--primary-col);              --table-main-col: whitesmoke;
+  --table-hover-bg: var(--theme-secondary);         --table-hover-col: var(--text-col);
+
+  /* tooltips */
+  --tooltip-bg: var(--primary-col);                 --tooltip-col: whitesmoke;
+}
+
+/* Global Resets */
+* { margin: 0; padding: 0; box-sizing: border-box; }

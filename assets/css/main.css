@@ -1,0 +1,84 @@
+/* content.css
+ * 'assets/css/content.css'
+ * @author Keirran Blackley
+ * @version 2.0
+ * used to style global elements used as content 
+*/
+
+main {
+  background-color: var(--main-bg);
+  width: var(--main-width);
+  margin: auto;
+}
+
+aside {
+  top: calc(var(--text-spacing)*4);
+  position: sticky;
+  width: var(--aside-width);
+  background-color: var(--aside-bg);
+  color: var(--aside-col);
+  float: left;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+aside ul { margin: var(--text-spacing) auto; list-style: none; }
+aside ul h3 { margin: var(--text-spacing); }
+aside a { margin: var(--text-spacing) auto; display: block; color: inherit; padding: var(--text-spacing); }
+aside a:hover:not(.active) { border-bottom: 1px solid var(--aside-col); color: inherit; transition: 1s; }
+
+aside + main {
+  margin-left: var(--aside-width);
+  width: calc(var(--aside-width) - 100);
+}
+
+
+@media screen and (max-width: 768px) {
+  main { width: 100%; }
+  aside { margin-bottom: calc(var(--text-spacing)*2); min-height: 100%; width: 100%; top: 0; height: auto; position: relative; }
+  aside + main { margin-left: 0; }
+}
+
+@media screen and (max-width: 400px) {
+  aside a { text-align: center; float: none; }
+}
+
+
+
+
+.uppercase { text-transform: uppercase; }
+.center { text-align: center; }
+
+
+.padded { padding: 24px; }
+.column-half { float: left; width: 50%; }
+.column-three { float: left; width: 33.33%; }
+
+.tabbedContent { display: none; animation: fadeEffect 1s; }
+
+
+
+
+article:after, 
+section:after { content: ""; display: table; clear: both; }
+
+article { margin: 0; padding: var(--text-spacing); background-color: var(--article-bg); border-radius: calc(var(--text-spacing)/2); }
+article > article { margin: var(--text-spacing) auto; background: white; }
+
+section ul {  list-style: none;  }
+section ul li { padding-left: var(--text-spacing); border-left: 2px solid #aaa; }
+section ul li:hover { border-color: var(--primary-col); transition: 0.5s; }
+section ol li:hover::marker { color: var(--primary-col); transition: 0.5s; }
+
+
+
+
+@keyframes fadeinEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@media screen and (max-width: 768px) {
+  .column-half, .column-three { width: 100%; }
+}

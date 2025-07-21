@@ -1,0 +1,96 @@
+/* forms.css
+ * 'assets/css/forms.css'
+ * @author Keirran Blackley
+ * @version 2.0
+ * used for styling form elements and buttons
+*/
+
+/* Alert Notifs */
+
+.banner { text-align: center; background: var(--banner-bg); color: var(--banner-col); padding: calc(var(---text-spacing)/2); }
+.banner > .close { background-color: transparent; color: var(--primary-col); float: right; cursor: pointer; transition: 0.5s; }
+.banner > .close:hover { background-color: var(--secondary-col); border-radius: var(--text-spacing); color: var(--text-col); }
+
+.banner.error { background-color: var(--error-col); color: var(--text-col); }
+.banner.success { background-color: var(--success-col); color: var(--text-col); }
+.banner.alert { background-color: var(--alert-col); color: var(--text-col); }
+.banner.info { background-color: var(--info-col); color: var(--text-col); }
+
+
+
+
+/* Form - Inputs */
+form { overflow: auto; margin: 20px auto 0 auto; }
+
+input[type=text], 
+input[type=password],
+input[type=search],
+select {
+  width: 100%;
+  padding: calc(var(--text-spacing));
+  font-size: large;
+  margin: calc(var(--text-spacing)*2) auto;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: calc(var(--text-spacing)/2);
+  box-sizing: border-box;
+}
+
+/* Search Input */
+input[type=search] {
+  background-image: url("../images/search_icon.png");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 8px center;
+  padding-left: 32px;
+  font-size: large;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: calc(var(--text-spacing)*1.5);
+}
+
+input:hover { background: #ddd; }
+input:focus { outline: 3px solid #ddd; }
+input.half { float: left; width: calc(50% - (var(--text-spacing))*2); margin: var(--text-spacing); }
+
+
+
+
+/* Custom Overwritten Checkbox */
+label.checkbox { display: block; position: relative; padding-left: 35px; margin-bottom: 12px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+/* Hide the browser's default checkbox */
+label.checkbox input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+/* Create a custom checkbox */
+.checkmark { position: absolute; left: var(--text-spacing); height: 16px; width: 16px; border: 1px solid #ddd; background-color: #aaa; border-radius: 4px; }
+/* On mouse-over, add a grey background color */
+label.checkbox:hover input ~ .checkmark { background-color: #ccc; }
+/* When the checkbox is checked, add a blue background */
+label.checkbox input:checked ~ .checkmark { background-color: var(--checkbox-checked); }
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after { content: ""; position: absolute; display: none; }
+/* Show the checkmark when checked */
+label.checkbox input:checked ~ .checkmark:after { display: block; border-radius: 4px; }
+/* Style the checkmark/indicator */
+label.checkbox .checkmark:after { top: 4px; left: 4px; padding: 3px; background-color: #ddd; }
+
+
+
+
+/* Submit and Buttons */
+button { max-width: 250px; border: 0; background-color: var(--btn-bg); color: var(--btn-col); }
+button.alpha { background-color: transparent; border: 1px solid var(--btn-bg); color: var(--btn-bg); }
+
+input[type=submit] { float: right; background-color: var(--btn-bg); color: var(--btn-col); border: none; }
+input[type=submit], button {
+   cursor: pointer;
+   font-weight: bold;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   border-radius: 4px;
+   min-width: 40%;
+   max-width: 200px;
+   margin: 20px auto;
+   padding: 12px 20px;
+   transition: 0.4s;
+}
+input[type=submit]:hover, button:hover { transform: scale(0.95); background-color: var(--btn-hover-bg); color: var(--btn-hover-col); border-color: inherit; }

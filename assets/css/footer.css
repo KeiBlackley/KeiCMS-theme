@@ -1,0 +1,27 @@
+/* footer.css
+ * 'assets/css/footer.css'
+ * @author Keirran Blackley
+ * @version 2.0
+ * used for styling global footer elements
+*/
+
+main {
+  margin-bottom: calc(var(--text-spacing)*4);
+}
+
+footer {
+  padding: var(--text-spacing);
+  text-align: center;
+  font-size: small;
+  background: var(--footer-bg);
+  color: var(--footer-col);
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+footer ul, footer ol,
+footer li { margin: 0; }
+footer li { display: inline-block; }
+footer p { flex: 1; text-align: right; }
