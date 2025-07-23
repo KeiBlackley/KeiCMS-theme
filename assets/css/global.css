@@ -64,7 +64,7 @@ tr:hover { background-color: var(--table-hover-bg); color: var(--table-hover-col
 
 
 
-/* Desktop */
+/* Mobile */
 @media screen and (max-width: 768px) {
 
 }

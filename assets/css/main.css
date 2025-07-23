@@ -59,6 +59,7 @@ aside + main {
 
 
 
+main,
 article:after, 
 section:after { content: ""; display: table; clear: both; }
 

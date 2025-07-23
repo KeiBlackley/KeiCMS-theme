@@ -15,12 +15,17 @@ header .title { text-align: center; padding: calc(var(--text-spacing)*2); color:
 /*
  * responsive navigation, sticky
 */ 
-nav { overflow: hidden; background: var(--nav-bg); color: var(--nav-col); }
+nav { box-shadow: var(--box-shadow); overflow: hidden; background: var(--nav-bg); color: var(--nav-col); }
+nav:after { content: ""; clear: both; display: table; }
 nav img { width: 16px; }
 nav i { margin-right: var(--text-spacing); }
 
 nav ul, nav ol,
 nav li { list-style: none; margin: 0; }
+
+nav ul { width: 70%; }
+nav ol { width: 30%; }
+nav ol, nav ol li { float: right; }
 
 /* Links */
 nav a, nav a:visited,
@@ -38,9 +43,10 @@ nav .dropdown ol { margin: 0 var(--text-spacing); }
 /* Dropdown Content */
 nav .dropdown ol { display: none; position: absolute; margin-top: calc(var(--text-spacing)*4); z-index: 80; box-shadow: var(--box-shadow); background-color: var(--nav-list-bg); }
 
-/* Links Active */
-nav a:hover, nav a:visited:hover,
-nav .dropdown ol a:hover, nav .dropdown ol a:visited:hover { background-color: var(--nav-hover-bg); color: var(--nav-hover-col); }
+/* Links Hover */
+nav a:hover:not(.active), nav a:visited:hover:not(.active),
+nav .dropdown ol a:hover:not(.active), nav .dropdown ol a:visited:hover:not(.active) { background-color: var(--nav-hover-bg); color: var(--nav-hover-col); }
+nav a.active:hover { opacity: 0.8; }
 /* Dropdown Parent Link Active and clipping fix */
 nav .dropdown a:first-child:hover ~ ol,
 nav .dropdown ol:hover { display: block; }
@@ -68,10 +74,12 @@ nav ul > li > a:first-child:not(#mobile-icon) { padding: var(--text-spacing) cal
 @media screen and (max-width: 768px) {
   /* Resets Margins */
   nav ul > li > a:first-child:not(#mobile-icon) { margin: 0; }
+  nav ol, nav ol li { float: left; }
+
   nav .dropdown > a:first-child, nav .dropdown > a:visited:first-child, nav .dropdown ol { margin: 0; }
   nav .dropdown > a:last-child, nav .dropdown > a:visited:last-child, nav .dropdown ol { margin-bottom: calc(var(--text-spacing)*2); }
   /* Hides Nav Links */
-  nav a, nav a:visited, ol a, ol a:visited { display: none; }
+  nav a, nav a:visited, nav ol a, nav  ol a:visited { display: none; }
   /* Shows First Link */
   nav li:first-child a { display: block; }
   nav #mobile-icon { float: right; display: block; }
@@ -86,7 +94,7 @@ nav ul > li > a:first-child:not(#mobile-icon) { padding: var(--text-spacing) cal
     animation-duration: 0.5s 
   }
   nav.responsive ul { margin-top: 40px; }
-  nav.responsive #mobile-icon { position: absolute; right: 0; top: 0; }
+  nav.responsive #mobile-icon { position: fixed; right: 0; top: 0; background-color: var(--nav-bg); width: 20%; text-align: right; }
   nav.responsive a { float: none; display: block; text-align: left; }
   nav.responsive .dropdown { float: none; }
   nav.responsive ol { position: relative; }

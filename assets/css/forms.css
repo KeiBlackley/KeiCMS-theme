@@ -19,10 +19,24 @@
 
 
 
+.form { 
+  width: 50%; 
+  margin: calc(var(--text-spacing)*2) auto; 
+  background: var(--white);
+  border-radius: calc(var(--text-spacing)/2);
+  box-shadow: var(--box-shadow);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .form { width: 90%; }
+}
+
 /* Form - Inputs */
 form { overflow: auto; margin: 20px auto 0 auto; }
 
 input[type=text], 
+input[type=email], 
 input[type=password],
 input[type=search],
 select {
